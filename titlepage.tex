@@ -1,0 +1,43 @@
+\begin{titlepage}
+
+% Set the Paragraph Indent to zero, so the first line is not Indented
+% Back-up the current value so it can be put back at the end of the title page
+\newlength{\backupparindent}
+\setlength{\backupparindent}{\parindent}
+\setlength{\parindent}{0mm}			
+
+\begin{center}
+
+\centering
+    {\scshape\Large Ph.D. Confirmation of Candidature \par}
+    \huge
+    \textbf{\doctitle \\}
+    \Large
+    \vspace*{5mm}
+    \textit{\docsubtitle}\\
+    \vspace*{10mm}
+    \includegraphics[width=30mm]{figures/qut_logo}\\
+    \large{School of Information Systems  \\}
+    \vspace*{30mm}
+    \Large
+    \textbf{\me} \\ (Student ID: \studentid)\\
+    \vspace{4cm}
+
+    \large Submitted in partial fulfillment of the requirement for the degree of \\
+    IF49 Doctor of Philosophy 
+    
+    \vspace{0.5cm}
+Supervisors:\\
+\begin{tabular}{rl}
+    \firstCommitteeMember\\
+    \secondCommitteeMember\\
+\end{tabular}
+    \vspace{3cm}
+\vfill
+%\docdate \\
+\today\par
+
+% Put the Paragraph Indent back to its original value
+\setlength{\parindent}{\backupparindent}
+\end{center}
+\end{titlepage} 

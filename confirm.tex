@@ -1,0 +1,124 @@
+%
+% QUT PhD Confimration Report template for LaTeX
+% Adopted from TU/e Style Master Thesis template for LaTeX 1.0 by Thijs Nugteren and Joos Buijs, and Sareh Sadeghianasl's QUT confirmation report.
+% v0.3 Feb 2021 Adam Burke
+%
+% THIS IS THE MAIN FILE (i.e. compile this file, compiling the others directly won't work)
+%
+\documentclass[a4paper,10pt,twoside]{report}
+
+%all the other includes etc. are done in the thesis.sty file.
+\usepackage{thesis}
+
+%
+% These commands need to be defined in order to produce a correct and personalized document
+%
+\newcommand{\shortdoctitle}{Confirmation}
+\newcommand{\doctitle}{Topic Title}
+\newcommand{\docsubtitle}{PhD Confirmation Report}
+
+\newcommand{\me}{Student McStudentface}
+\newcommand{\studentid}{11111111}
+\newcommand{\keywords}{keyword1,keyword2}
+\newcommand{\version}{0.1}
+
+%Be sure to use all the titles for your committee members!!! (their names show up on the very first page!)
+\newcommand{\firstCommitteeMember}{Dr Supervisor McSupervisorFace}
+\newcommand{\secondCommitteeMember}{Professor Mentor McAdvisorFace}
+
+%\def\chaptersep{\clearemptydoublepage}
+\def\chaptersep{}
+
+\author{\me}
+
+%
+% PDF settings
+%
+\hypersetup
+{
+    pdfauthor={\me},
+    pdftitle={\shortdoctitle},
+    pdfsubject={\doctitle},
+    pdfkeywords={\keywords}
+}
+
+\begin{document}
+
+%use this include for PDF and distribution versions
+\pagenumbering{roman}
+\include{titlepage}
+
+\normalsize
+
+\chaptersep
+
+%Sometimes line numbers are nice, uncomment the next line to enable:
+%\linenumbers
+
+%It could be handy to have a list of todos and brainstorms in your thesis
+%\chapter*{*General todos*}\todo{remove this chapter}
+%\input{chapters/general_todos}
+
+%\chapter*{*Brainstorm results*}\todo{remove this chapter}
+%\input{chapters/brainstorm_results}
+
+\chapter*{Abstract}\label{chapter:abstract}
+\input{chapters/abstract}
+\chaptersep
+
+
+\chaptersep
+
+\tableofcontents
+\chaptersep
+
+%\listoffigures
+%\chaptersep
+
+%\listoftables
+%\chaptersep
+
+%\lstlistoflistings
+%\chaptersep
+
+\chapter{Introduction}\label{chapter:introduction}
+\setcounter{page}{0}
+\pagenumbering{arabic}
+%from here on, start the 'real' page numbering, from 1, with normal digits
+\input{chapters/introduction}
+
+\chaptersep
+
+\chapter{Literature Review}\label{chapter:preliminaries}
+\input{chapters/preliminaries}
+
+\chaptersep
+
+\chapter{Research Questions}\label{chapter:first_real_chapter}
+\input{chapters/first_real_chapter}
+
+\chaptersep
+
+\chapter{Methodology and Research Design}\label{chapter:second_real_chapter}
+\input{chapters/second_real_chapter}
+
+\chaptersep
+
+\chapter{Timeline For Completion}\label{chapter:conclusions}
+\input{chapters/conclusions}
+
+\chaptersep
+
+%Choose a good bibliography style, plain would do often, but these might be nice too
+%\bibliographystyle{these}
+\bibliographystyle{plain}
+\bibliography{references}
+
+\chaptersep
+
+\appendix
+\addcontentsline{toc}{chapter}{Appendix}
+
+\input{appendices/main}
+
+\end{document}
